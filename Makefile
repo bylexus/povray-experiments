@@ -15,3 +15,8 @@ $(THUMBS):
 	CWD=$(shell pwd); \
 	cd $$PROJECTDIR && make thumb && cd $$CWD; \
 	cp $$PROJECTDIR/$$PROJECT-thumb.png $(THUMBSDIR)/
+
+.PHONY:list
+list:
+	@echo $(addprefix "\n",$(PROJECTS))
+
